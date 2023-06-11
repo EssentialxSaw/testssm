@@ -1,0 +1,26 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h2>My First Javascript</h2>
+        <button type="button" onclick="show()">Click to know how long since we meet each other
+            <a style="color: blue;">&#10084</a></button>
+        <p id="demo"></p>
+
+        <script>
+            import { Temporal } from '@js-temporal/polyfill';
+
+            const now = Temporal.PlainDate.from("2022-January-16");
+
+            console.log(now.toString());
+        // 2022-08-08
+
+
+            //function show(){
+          //      document.getElementById("demo").innerHTML=Date();
+          //  };
+
+        </script>
+    </body>
+</html>

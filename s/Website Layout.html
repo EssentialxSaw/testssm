@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <title>Love You Baby &#10084</title>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+        <style>
+
+            *{
+
+                box-sizing: border-box;
+
+            }
+
+            body{
+                user-select: none;
+                margin: 0;
+
+            }
+
+            .header{
+
+                background-color: #f1f1f1;
+
+                padding: 20px;
+
+                text-align: center;
+
+                color: blue;
+
+            }
+
+            .topnav{
+
+                overflow: hidden;
+
+                background-color: lightblue;
+
+                margin-left: 550px;
+
+            }
+
+            .topnav a{
+
+                margin-left: 20px;
+
+                float: left;
+
+                background-color: lavender;
+
+                display: block;
+
+                color: grey;
+
+                text-align: center;
+
+                padding: 14px 16px;
+
+                text-decoration: none;
+
+            }
+
+            .topnav a:hover{
+
+                background-color: grey;
+
+                color: lightblue;
+
+
+
+            }
+
+            .column{
+
+                float: left;
+
+                padding: 10px;
+
+            }
+
+            .row:after{
+
+                content: "";
+
+                display: table;
+
+                clear: both;
+
+            }
+
+            
+            @media screen and (max-width:600px){
+
+                .column.side, .column.column.middle{
+
+                    width: 100%;
+
+                }
+
+            }
+
+            .footer{
+
+                background-color: #f1f1f1;
+
+                padding: 10px;
+
+                text-align: center;
+
+            }
+
+        </style>
+
+
+
+    </head>
+
+    <body style="background-color: lightblue;">
+        
+        <h1 style="text-align: center;">Hello Saw<a style="color: blue;">&#10084</a></h1>
+
+        <a href="saw.css"></a>
+
+        <div class="topnav">
+
+            <a href="Website Layout.html">Home</a>
+
+            <a href="Me&You.html">Me & You</a>
+
+
+        </div> </br></br>
+
+        <video width="400" controls style="margin-left: 35%;">
+
+            <source src="saw.mp4" type="video/mp4">
+
+            <source src="saw.mp4" type="video/ogg">
+
+        </video></br></br>
+
+        
+        <button type="button" onclick="show()" style="margin-left: 38%;">
+            Click to know how long since we meet each other
+            <a style="color: blue;">&#10084</a></button>
+        
+            <p id="demo" style="text-align: center;"></p>
+        
+        <div class="footer">
+
+            <p>I Love You So Much<a style="color: blue;">&#10084</a></p>
+
+        </div>
+        
+             
+                <script>
+                    
+    
+
+        // Function to calculate time zone offset from selected date to current date
+function calculateTimeZoneOffset(selectedDate) {
+  // Get the selected date and current date
+  const selectedDateTime = new Date(selectedDate);
+  const currentDateTime = new Date();
+
+  // Get the time zone offset in minutes for the selected date
+  const selectedTimezoneOffset = selectedDateTime.getTimezoneOffset();
+
+  // Get the time zone offset in minutes for the current date
+  const currentTimezoneOffset = currentDateTime.getTimezoneOffset();
+
+  // Calculate the time zone offset difference
+  const timezoneOffsetDifference = selectedTimezoneOffset - currentTimezoneOffset;
+
+  // Convert the offset difference to hours and minutes
+  const hoursOffset = Math.floor(Math.abs(timezoneOffsetDifference) / 60);
+  const minutesOffset = Math.abs(timezoneOffsetDifference) % 60;
+
+  // Determine the sign of the offset (+ or -)
+  const sign = timezoneOffsetDifference > 0 ? '+' : '-';
+
+  // Format the offset as a string
+  const offsetString = `${sign}${hoursOffset.toString().padStart(2, '0')}:${minutesOffset.toString().padStart(2, '0')}`;
+
+  // Return the time zone offset
+  return offsetString;
+}
+
+// Example usage
+const selectedDate = '2022-01-16'; // Replace with your selected date
+const timeZoneOffset = calculateTimeZoneOffset(selectedDate);
+function show(){
+        //document.getElementById("demo").innerHTML=Date();
+        document.getElementById("demo").innerHTML= `From ${selectedDate} To ${Date()}`;
+    }
+
+
+</script>  
+    </body>
+
+</html>
